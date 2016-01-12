@@ -1,0 +1,9 @@
+<template name="Likes">
+  <ul>
+  {{#each likeList}}
+    <li>
+      {{user.emails.[0].address}} / {{article.제목}}
+    </li>
+  {{/each}}
+  </ul>
+</template>

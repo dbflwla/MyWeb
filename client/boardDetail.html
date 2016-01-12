@@ -1,0 +1,27 @@
+<template name="boardDetail">
+    <div class="well">
+        {{#with userObj}}
+            <article>
+                <header>
+                    제목 : {{제목}}
+                </header>
+                글번호: {{글번호}}<br>
+                작성자: {{작성자}}<br>
+                <main>
+                    본문 : {{본문}}
+                </main>
+            </article>
+        {{/with}}
+    </div>
+    <div>
+        <input type="text" class="form-control" name="내용" placeholder="댓글입력">
+        <button name="작성" class="btn btn-success">작성</button>
+        <button id="commentCancel" class="btn btn-warning">취소</button>
+        {{#each comments}}
+            <div>
+                {{작성자}}
+                {{내용}}
+            </div>
+        {{/each}}
+    </div>
+</template>

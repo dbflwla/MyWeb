@@ -1,0 +1,42 @@
+<template name="header">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Home</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/freeBoard">자유게시판</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/Likes">Likes</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!--{{> loginButtons}} &lt;!&ndash; here &ndash;&gt;-->
+                {{#if currentUser}}
+                    <div class="login">
+                        <!--//로그인 되어 있을-->
+                        {{email}}
+                        <button class="btn btn-default" name="Logout">Logout</button>
+                    </div>
+                {{else}}
+                    <!--로그인이 안되어 있을때-->
+                    <table class="loginForm">
+                        <tr>
+                            <td><input type="text" name="ID" class="form-control" id="exampleInputEmail3" placeholder="Enter email" width="200px"/></td>
+                            <td><input type="password" name="PW" class="form-control" id="exampleInputPassword3" placeholder="Password" width="200px"/></td>
+                            <td><Button name="Login" class="btn btn-default">Login</Button></td>
+                            <td><Button name="Join" class="btn btn-default">Join</Button></td>
+                        </tr>
+                    </table>
+                    {{> Join}}
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,38 @@
+<head>
+    <title>MyWebpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<template name="layout">
+    <div class="container_fluid">
+        <header id="mainHeader">
+            {{> header}}
+        </header>
+        <main>
+            <aside>
+                <div class="container">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="centered">
+                                <div class="left">
+                                    <img src="images/dbsgh.jpg" alt="이미지를 불러오지 못하였습니다." width="220" height="220" class="img-circle">
+                                    <h1>Hello!!</h1>
+                                    <h2>this is my website</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="contents">
+                {{> yield}}
+            </div>
+        </main>
+        <footer>
+            <a href="mailto:dbflwla1@gmail.com" class="mail">mail</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+            <a href="tel:010-9832-0617" class="call">call</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+            ◎created by yunho Choi◎
+        </footer>
+    </div>
+</template>
